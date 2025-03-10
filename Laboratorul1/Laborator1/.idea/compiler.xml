@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Lab2Gradel" target="11" />
+      <module name="Lab2Gradel.main" target="11" />
+      <module name="Lab2Gradel.test" target="11" />
+      <module name="Lab2Gradle" target="11" />
+      <module name="Lab2Gradle.main" target="11" />
+      <module name="Lab2Gradle.test" target="11" />
+      <module name="Laborator2_Gradel" target="11" />
+      <module name="Laborator2_Gradel.main" target="11" />
+      <module name="Laborator2_Gradel.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
