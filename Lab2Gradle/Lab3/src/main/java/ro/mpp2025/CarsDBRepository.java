@@ -72,7 +72,20 @@ public class CarsDBRepository implements CarRepository {
 
     @Override
     public void update(Integer integer, Car elem) {
-      //to do
+        logger.traceEntry("updating car {} ",elem);
+        Connection con=dbUtils.getConnection();
+        try(PreparedStatement preStmt=con.prepareStatement("update Cars set manufacturer=?, model=?, year=? where id=?")) {
+            preStmt.setString(1, elem.getManufacturer());
+            preStmt.setString(2, elem.getModel());
+            preStmt.setInt(3, elem.getYear());
+            preStmt.setInt(4, integer);
+            int result = preStmt.executeUpdate();
+            logger.trace("Updated {} instances", result);
+        }catch (SQLException ex){
+            logger.error(ex);
+            System.out.println("Error DB "+ex);
+        }
+        logger.traceExit();
     }
 
     @Override
